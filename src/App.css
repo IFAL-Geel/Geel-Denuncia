@@ -1,35 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.backInner{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.backInner > img{
+  height: 99%;
+  object-fit: cover;
+  width: 100%;
+  mix-blend-mode: overlay;
+  opacity: .5;
 }
 
 .AppInner{
+  position: relative;
   width: 100vw;
   height: 100vh;
-  background-color: #1d1d1d;
+  background: rgb(30,50,74);
+  background: linear-gradient(148deg, rgb(19, 31, 46) 0%, rgb(2, 4, 5) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .reportInner{
+  position: relative;
   width: 500px;
-  height: 600px;
-  background-color: #4B813A;
+  background: rgb(96,22,22);
+  background: linear-gradient(144deg, rgba(96,22,22,1) 0%, rgba(166,164,43,1) 24%, rgba(62,107,47,1) 49%, rgba(28,50,103,1) 78%, rgba(58,27,111,1) 100%);
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
   border-radius: 11px;
-  padding: 30px 0;
-  box-shadow: rgba(70, 206, 104, 0.384) 0px 7px 29px 0px;
+  box-shadow: rgb(2, 0, 31) 0px 7px 29px 0px;
+  padding: 20px 0px 30px 0px;
+  transition: .5s ease;
 }
 
 .imgInner{
   display: flex;
   width: 100%;
-  height: 100px;
+  height: 90px;
   justify-content: center;
   align-items: center;
 }
@@ -39,14 +62,15 @@
 }
 
 .reportArea{
-  width: 80%;
+  width: 85%;
   height: 350px;
   border-radius: 11px;
-  background-color: #c4ecb8;
+  background-color: #c5e2bc;
   padding: 10px;
   resize: none;
-  font-size: 1.3em;
+  font-size: .9em;
   color: #4B813A;
+  border: none;
 }
 
 .reportArea:focus{
@@ -55,13 +79,55 @@
 }
 
 .reportSend{
-  width: 80%;
+  width: 85%;
   height: 50px;
   border-radius: 11px;
   border: none;
-  background-color: #172712;
-  color: #c4ecb8;
-  font-size: 1.3em;
+  background-color: #4daa30;
+  color: #ffffff;
+  font-size: 1.2em;
   font-weight: 700;
   cursor: pointer;
+  margin-top: 10px;
+  transition: .2s ease;
+}
+
+.reportTheme{
+  color: white;
+  font-weight: 800;
+  font-size: 1.6em;
+  margin: 20px 0 15px 0;
+}
+
+.reportArea::-webkit-scrollbar {
+  width: 15px;
+}
+.reportArea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.reportArea::-webkit-scrollbar-thumb {
+  background-color: #4B813A;
+  border-radius: 17px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+.reportSend:hover{
+  background-color: #2f661e;
+  color: #bcd1c4;
+}
+
+
+@media only screen and (max-width: 700px){
+  .reportInner{
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .reportTheme{
+    font-size: 1.3em;
+    margin: 20px 0 5px 0;
+  }
 }
