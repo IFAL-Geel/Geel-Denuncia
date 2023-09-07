@@ -189,6 +189,7 @@
 .reportSend:disabled{
   background-color: gray;
   color: rgb(196, 196, 196);
+  cursor: auto;
 }
 
 
