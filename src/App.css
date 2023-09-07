@@ -37,7 +37,7 @@
 .reportInner{
   position: relative;
   width: 500px;
-  height: 616px;
+  height: auto;
   background: rgb(96,22,22);
   background: linear-gradient(144deg, rgba(96,22,22,1) 0%, rgba(166,164,43,1) 24%, rgba(62,107,47,1) 49%, rgba(28,50,103,1) 78%, rgba(58,27,111,1) 100%);
   display: flex;
@@ -120,6 +120,7 @@
   justify-content: center;
   width: 100%;
   position: relative;
+  margin: 15px 0 8px 0;
 }
 
 .iconInner{
@@ -220,5 +221,9 @@
 
   .reportSend{
     font-size: 1em;
+  }
+
+  .nameInner{
+    margin: 0;
   }
 }
