@@ -4,10 +4,12 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import GeelLogo from "../public/LogoGeel.png"
 import Back from "../public/Background.png"
+import Modal from './components/Modal/Index'
 
 function App() {
   const [message, setMessage] = useState("")
   const [sendEnabled, setSendEnabled] = useState(false)
+  const [showModal, setShowModal] = useState(false)
 
   useEffect(() => {
     if(message.trim() !== ""){
@@ -19,6 +21,7 @@ function App() {
 
   return (
     <div className="AppInner">
+      <Modal onClose={() => setShowModal(false)} show={showModal}/>
       <div className="backInner">
         <img src={Back} alt="" />
       </div>
@@ -49,7 +52,7 @@ function App() {
         </form>
         <div className="optionsInner">
           <i class="fa-solid fa-chevron-left"></i>
-          <i class="fa-regular fa-circle-question"></i>
+          <i class="fa-regular fa-circle-question" onClick={() => setShowModal(true)}></i>
         </div>
       </div>
     </div>

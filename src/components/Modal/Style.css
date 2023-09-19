@@ -1,0 +1,108 @@
+.modalInner{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    background-color: rgba(10, 25, 39, 0.541);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalBack{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.modalInfos{
+    position: relative;
+    max-height: 750px;
+    max-width: 1050px;
+    padding: 1.5em .7em .5em 1.5em;
+    margin: 0;
+    width: 100%;
+    background-color: #083128;
+    box-sizing: border-box;
+    border-radius: 0.5em;
+    overflow: auto;
+    pointer-events: auto;
+    line-height: 1.5em;
+}
+
+.modalInfos{
+    color: #b1d4cd;
+    font-size: 1.3em;
+    font-weight: 300;
+    line-height: 1.35em;
+}
+
+.modalInfos > dl > dt{
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.modalInfos > dl > dd{
+    padding-left: 20px;
+}
+
+.modalInfos::-webkit-scrollbar {
+    width: 17px;
+}
+
+.modalInfos::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modalInfos::-webkit-scrollbar-thumb{
+    background-color: #105849;
+    border-radius: 17px;
+    border: 5px solid transparent;
+    background-clip: content-box;
+}
+
+.privacy{
+    color: #b67676;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px !important;
+    margin-bottom: 10px;
+}
+
+.privacyDesc{
+    width: 100%;
+    text-align: justify;
+    color: #b67676;
+}
+
+.modalInfos > p{
+    width: 100%;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+footer{
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: .5em;
+    color: white;
+}
+
+.modalInfos > i{
+    position: fixed;
+    color: #ffffff;
+    font-size: 1.5em;
+    top: 15px;
+    right: 5px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.modalInfos > i:hover{
+    opacity: .5;
+    transform: scale(1.1);
+}
