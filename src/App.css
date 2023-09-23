@@ -92,7 +92,7 @@
 }
 
 .reportArea{
-  width: 85%;
+  width: 100%;
   height: 260px;
   border-radius: 11px;
   background-color: #c5e2bc;
@@ -189,17 +189,74 @@
 
 .reportSend:disabled{
   background-color: gray;
-  color: rgb(196, 196, 196);
+  color: #c4c4c4;
   cursor: auto;
 }
 
+.directFilterInner{
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.iconDropInner > i{
+  position: absolute;
+  color: #2f661e;
+  font-size: 1.05em;
+}
+
+.iconDropInner{
+  position: absolute;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 12px;
+}
+
+select{
+  width: 100%;
+  height: 40px;
+  padding: 0px 0px 0px 29px;
+  border-radius: 20px;
+  margin-bottom: 9px;
+  background-color: #c5e2bc;
+  color: #4B813A;
+  border: none;
+  outline: none;
+  font-size: .9em;
+  position: relative;
+}
+
+.textAreaInner{
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.lenghtTextArea{
+  position: absolute;
+  right: 7px;
+  bottom: 7px;
+  font-size: .7em;
+  color: rgb(236, 93, 93);
+}
+
+select:focus{
+  border: none;
+  outline: 1px solid #4B813A;
+}
 
 @media only screen and (max-width: 530px){
   .reportInner{
-    width: 95%;
-    height: 97%;
-    border-radius: 11px;
+    width: 100%;
+    height: 100%;
     transition: .5s ease;
+    border-radius: 0;
   }
 
   .reportTheme{
@@ -212,7 +269,6 @@
   }
 
   .reportArea{
-    margin: 10px;
     font-size: .8em;
   }
 
@@ -226,5 +282,10 @@
 
   .nameInner{
     margin: 0;
+  }
+
+  .directFilterInner{
+    margin-top: 8px;
+    font-size: .9em;
   }
 }

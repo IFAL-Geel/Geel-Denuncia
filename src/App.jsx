@@ -10,12 +10,25 @@ function App() {
   const [message, setMessage] = useState("")
   const [sendEnabled, setSendEnabled] = useState(false)
   const [showModal, setShowModal] = useState(false)
+  const [textAreaLenght, setTextAreaLenght] = useState(0)
 
   useEffect(() => {
-    if(message.trim() !== ""){
+    if(message.trim() !== "" && message.trim().length > 50){
       setSendEnabled(true)
     } else {
       setSendEnabled(false)
+      
+    }
+  })
+
+  useEffect(() => {
+    setTextAreaLenght(message.trim().length)
+    if(message.trim().length >= 50){
+      const text = document.querySelector(".lenghtTextArea")
+      text.style.visibility =  "hidden"
+    } else {
+      const text = document.querySelector(".lenghtTextArea")
+      text.style.visibility =  "visible"
     }
   })
 
@@ -30,7 +43,7 @@ function App() {
           <div className="imgInner">
             <img src={GeelLogo} alt="" />
           </div>
-          <h1 className="reportTheme">CANAL DE DENÚNCIAS</h1>
+          <h1 className="reportTheme">CENTRAL DE DENÚNCIAS</h1>
           <div className="nameInner">
             <input
             name='Nome'
@@ -41,13 +54,28 @@ function App() {
               <i class="fa-solid fa-user"></i>
             </div>
           </div>
-          <textarea
-            name='Relato'
-            value={message}
-            onChange={(e) => {setMessage(e.target.value)
-                              console.log(message)}}
-            className='reportArea'
-            placeholder='Digite seu relato...'/>
+          
+          <div className="directFilterInner">
+            <select name='Diretoria Designada'>
+              <option value="Diretoria da Mulher">Diretoria da Mulher</option>
+              <option value="Diretoria de Diversidade Sexual e Gênero">Diretoria de Diversidade Sexual e Gênero</option>
+              <option value="Diretoria de Diversidade Étnica">Diretoria de Diversidade Étnica</option>
+              <option value="Outro...">Outra...</option>
+            </select>
+            <div className="iconDropInner">
+              <i class="fa-brands fa-wpforms"></i>
+            </div>
+          </div>
+
+          <div className="textAreaInner">
+            <textarea
+              name='Relato'
+              value={message}
+              onChange={(e) => {setMessage(e.target.value)}}
+              className='reportArea'
+              placeholder='Digite seu relato...'/>
+              <p className="lenghtTextArea">{textAreaLenght}/50</p>
+          </div>
           <button className="reportSend" disabled={!sendEnabled}>Enviar Denúncia</button>
         </form>
         <div className="optionsInner">
