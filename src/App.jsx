@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import GeelLogo from "../public/LogoGeel.png"
 import Back from "../public/Background.png"
 import Modal from './components/Modal/Index'
+import Thanks from './components/Thanks/Index'
 
 function App() {
   const [message, setMessage] = useState("")
@@ -12,6 +11,8 @@ function App() {
   const [showModal, setShowModal] = useState(false)
   const [textAreaLenght, setTextAreaLenght] = useState(0)
   const [dir, setDir] = useState("Diretoria da Mulher")
+  const [name, setName] = useState("")
+  const [showThanks, setShowThanks] = useState(false)
 
   useEffect(() => {
     if(message.trim() !== "" && message.trim().length > 50){
@@ -33,19 +34,50 @@ function App() {
     }
   }, [message])
 
+  function sendMessage(e){
+    e.preventDefault()
+    const button = document.querySelector(".reportSend")
+    const inputs = document.querySelectorAll(".inp")
+
+    inputs.forEach(input => {
+      input.style.pointerEvents = "none"
+    });
+
+    button.innerHTML = "Enviando..."
+    button.style.pointerEvents = "none"
+    button.style.backgroundColor = "#39beb3"
+
+    fetch("https://formsubmit.co/ajax/els26@aluno.ifal.edu.br", {
+    method: "POST",
+    headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+        Nome: name != "" ? name : "Anônimo",
+        Diretoria: dir,
+        Relato: message
+    })
+    })
+      .then(response => response.json())
+      .then(data => {
+        setName("")
+        setMessage("")
+        button.innerHTML = "Enviado"
+        button.style.backgroundColor = "gray"
+        setShowThanks(true)})
+      .catch(error => console.log(error));
+    }
+
   return (
     <div className="AppInner">
+      <Thanks show={showThanks}/>
       <Modal onClose={() => setShowModal(false)} show={showModal}/>
       <div className="backInner">
         <img src={Back} alt="" />
       </div>
       <div className="reportInner">
-        <form action="https://formsubmit.co/els26@aluno.ifal.edu.br" method="POST" className="formInner">
-
-          <input type="hidden" name="_subject" value={"Central de Denúncias | " + dir} />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="table"></input>
-          <input type="hidden" name="_next" value="https://geeldenuncia.vercel.app"></input>
+        <form className="formInner">
 
           <div className="imgInner">
             <img src={GeelLogo} alt="" />
@@ -54,16 +86,18 @@ function App() {
           <div className="nameInner">
             <input
             name='Nome'
-            className='reportName'
+            className='reportName inp'
             type="text" 
-            placeholder='Digite seu nome ou deixe vazio para "Anônimo"'/>
+            placeholder='Digite seu nome ou deixe vazio para "Anônimo"'
+            value={name}
+            onChange={(e) => {setName(e.target.value)}}/>
             <div className="iconInner">
               <i class="fa-solid fa-user"></i>
             </div>
           </div>
           
           <div className="directFilterInner">
-            <select name='Diretoria' onChange={(e) => {setDir(e.target.value)}}>
+            <select name='Diretoria inp' onChange={(e) => {setDir(e.target.value)}}>
               <option value="Diretoria da Mulher">Diretoria da Mulher</option>
               <option value="Diretoria de Diversidade Sexual e Gênero">Diretoria de Diversidade Sexual e Gênero</option>
               <option value="Diretoria de Saude e Meio-Ambiente">Diretoria de Saude e Meio-Ambiente</option>
@@ -80,11 +114,11 @@ function App() {
               name='Relato'
               value={message}
               onChange={(e) => {setMessage(e.target.value)}}
-              className='reportArea'
+              className='reportArea inp'
               placeholder='Digite seu relato...'/>
               <p className="lenghtTextArea">{textAreaLenght}/50</p>
           </div>
-          <button className="reportSend" disabled={!sendEnabled}>Enviar Denúncia</button>
+          <button className="reportSend" disabled={!sendEnabled} onClick={(e) => {sendMessage(e)}}>Enviar Denúncia</button>
         </form>
         <div className="optionsInner">
           <i class="fa-regular fa-circle-question" onClick={() => setShowModal(true)}></i>

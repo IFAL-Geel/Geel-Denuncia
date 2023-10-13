@@ -1,0 +1,70 @@
+.thanksInner{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(5, 12, 19, 0.575);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thanksInfos{
+    position: relative;
+    max-height: 750px;
+    max-width: 650px;
+    padding: 1.5em .7em .5em 1.5em;
+    margin: 0;
+    width: 100%;
+    background-color: #083128;
+    box-sizing: border-box;
+    border-radius: 0.5em;
+    overflow: auto;
+    pointer-events: auto;
+    line-height: 1.5em;
+}
+
+.thanksInfos > h1{
+    color: #b1d4cd;
+    margin-bottom: 12px;
+    line-height: 1;
+}
+
+.thanksInfos > p{
+    color: #b1d4cd;
+    line-height: 1;
+    width: 90%;
+}
+
+.thanksInfos > button{
+    width: 100%;
+    height: 40px;
+    border-radius: 11px;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    color: #08332a;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.thanksInfos > button:hover{
+    color: rgb(151, 24, 24);
+    background-color: #f3b8b8;
+}
+
+@media only screen and (max-width: 750px){
+    .thanksInfos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        max-height: none;
+        font-size: 1em;
+        background-color: #083128c4;
+        transform: scale(1) !important;
+    }
+}
