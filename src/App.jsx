@@ -11,6 +11,7 @@ function App() {
   const [sendEnabled, setSendEnabled] = useState(false)
   const [showModal, setShowModal] = useState(false)
   const [textAreaLenght, setTextAreaLenght] = useState(0)
+  const [dir, setDir] = useState("Diretoria da Mulher")
 
   useEffect(() => {
     if(message.trim() !== "" && message.trim().length > 50){
@@ -19,7 +20,7 @@ function App() {
       setSendEnabled(false)
       
     }
-  })
+  },)
 
   useEffect(() => {
     setTextAreaLenght(message.trim().length)
@@ -30,7 +31,7 @@ function App() {
       const text = document.querySelector(".lenghtTextArea")
       text.style.visibility =  "visible"
     }
-  })
+  }, [message])
 
   return (
     <div className="AppInner">
@@ -39,7 +40,12 @@ function App() {
         <img src={Back} alt="" />
       </div>
       <div className="reportInner">
-        <form action="" className="formInner">
+        <form action="https://formsubmit.co/els26@aluno.ifal.edu.br" method="POST" className="formInner">
+
+          <input type="hidden" name="_subject" value={"Central de Denúncias | " + dir} />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table"></input>
+
           <div className="imgInner">
             <img src={GeelLogo} alt="" />
           </div>
@@ -56,11 +62,12 @@ function App() {
           </div>
           
           <div className="directFilterInner">
-            <select name='Diretoria Designada'>
+            <select name='Diretoria' onChange={(e) => {setDir(e.target.value)}}>
               <option value="Diretoria da Mulher">Diretoria da Mulher</option>
               <option value="Diretoria de Diversidade Sexual e Gênero">Diretoria de Diversidade Sexual e Gênero</option>
+              <option value="Diretoria de Saude e Meio-Ambiente">Diretoria de Saude e Meio-Ambiente</option>
               <option value="Diretoria de Diversidade Étnica">Diretoria de Diversidade Étnica</option>
-              <option value="Outro...">Outra...</option>
+              <option value="Não sei dizer">Não sei dizer...</option>
             </select>
             <div className="iconDropInner">
               <i class="fa-brands fa-wpforms"></i>
@@ -79,7 +86,6 @@ function App() {
           <button className="reportSend" disabled={!sendEnabled}>Enviar Denúncia</button>
         </form>
         <div className="optionsInner">
-          <i class="fa-solid fa-chevron-left"></i>
           <i class="fa-regular fa-circle-question" onClick={() => setShowModal(true)}></i>
         </div>
       </div>

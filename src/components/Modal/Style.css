@@ -114,5 +114,12 @@ footer{
         max-width: none;
         max-height: none;
         font-size: 1em;
+        transform: scale(1) !important;
+    }
+}
+
+@media only screen and (max-height: 650px){
+    .modalInfos{
+        transform: scale(.8);
     }
 }

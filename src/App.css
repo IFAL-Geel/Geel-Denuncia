@@ -65,7 +65,7 @@
   font-size: 1.2em;
   width: 92%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   top: 20px;
 }
 
@@ -257,6 +257,7 @@ select:focus{
     height: 100%;
     transition: .5s ease;
     border-radius: 0;
+    transform: scale(1) !important;
   }
 
   .reportTheme{
@@ -287,5 +288,11 @@ select:focus{
   .directFilterInner{
     margin-top: 8px;
     font-size: .9em;
+  }
+}
+
+@media only screen and (max-height: 650px){
+  .reportInner{
+    transform: scale(.9);
   }
 }
