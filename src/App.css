@@ -296,3 +296,9 @@ select:focus{
     transform: scale(.9);
   }
 }
+
+@supports (-webkit-touch-callout: none){
+  .iconDropInner{
+    visibility: hidden;
+  }
+}
