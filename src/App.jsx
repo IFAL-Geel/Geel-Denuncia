@@ -10,13 +10,13 @@ function App() {
   const [sendEnabled, setSendEnabled] = useState(false)
   const [showModal, setShowModal] = useState(false)
   const [textAreaLenght, setTextAreaLenght] = useState(0)
-  const [dir, setDir] = useState("Diretoria da Mulher")
+  const [dir, setDir] = useState("")
   const [name, setName] = useState("")
   const [showThanks, setShowThanks] = useState(false)
   const [number, setNumber] = useState("")
 
   useEffect(() => {
-    if(message.trim() !== "" && message.trim().length > 50 && dir){
+    if(message.trim() !== "" && message.trim().length > 50 && dir != ""){
       setSendEnabled(true)
     } else {
       setSendEnabled(false)
