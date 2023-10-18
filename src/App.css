@@ -114,13 +114,21 @@
   font-size: .9em;
 }
 
-.nameInner{
+.inputInner{
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   position: relative;
-  margin: 15px 0 8px 0;
+  margin: 8px 0;
+}
+
+.numberInput{
+  margin: 0 0 8px 0;
+}
+
+.nameInput{
+  margin-top: 25px;
 }
 
 .iconInner{

@@ -13,6 +13,7 @@ function App() {
   const [dir, setDir] = useState("Diretoria da Mulher")
   const [name, setName] = useState("")
   const [showThanks, setShowThanks] = useState(false)
+  const [number, setNumber] = useState("")
 
   useEffect(() => {
     if(message.trim() !== "" && message.trim().length > 50){
@@ -49,15 +50,18 @@ function App() {
 
     fetch("https://formsubmit.co/ajax/els26@aluno.ifal.edu.br", {
     method: "POST",
-    headers: { 
+    headers:
+      { 
         'Content-Type': 'application/json',
         'Accept': 'application/json'
-    },
-    body: JSON.stringify({
+      },
+    body:
+      JSON.stringify({
         Nome: name != "" ? name : "Anônimo",
+        Número: number != "" ? number : "Anônimo",
         Diretoria: dir,
         Relato: message
-    })
+      })
     })
       .then(response => response.json())
       .then(data => {
@@ -83,7 +87,7 @@ function App() {
             <img src={GeelLogo} alt="" />
           </div>
           <h1 className="reportTheme">CENTRAL DE DENÚNCIAS</h1>
-          <div className="nameInner">
+          <div className="inputInner nameInput">
             <input
             name='Nome'
             className='reportName inp'
@@ -93,6 +97,19 @@ function App() {
             onChange={(e) => {setName(e.target.value)}}/>
             <div className="iconInner">
               <i class="fa-solid fa-user"></i>
+            </div>
+          </div>
+
+          <div className="inputInner numberInput">
+            <input
+            name='Número'
+            className='reportName inp'
+            type="text" 
+            placeholder='Digite seu número ou deixe vazio'
+            value={number}
+            onChange={(e) => {setNumber(e.target.value)}}/>
+            <div className="iconInner">
+              <i class="fa-solid fa-phone"></i>
             </div>
           </div>
           
