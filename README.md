@@ -1,4 +1,6 @@
-# Central de Denúncias - Geel IFAL
+<div style="text-align: center; width: 100%">
+  <h1>Central de Denúncias - Geel IFAL</h1>
+</div>
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
