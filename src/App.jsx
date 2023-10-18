@@ -16,13 +16,13 @@ function App() {
   const [number, setNumber] = useState("")
 
   useEffect(() => {
-    if(message.trim() !== "" && message.trim().length > 50){
+    if(message.trim() !== "" && message.trim().length > 50 && dir){
       setSendEnabled(true)
     } else {
       setSendEnabled(false)
       
     }
-  },)
+  },[message, dir])
 
   useEffect(() => {
     setTextAreaLenght(message.trim().length)
@@ -34,6 +34,14 @@ function App() {
       text.style.visibility =  "visible"
     }
   }, [message])
+
+  useEffect(() => {
+    const formatPhoneNumber = (value) => {
+      const cleaned = value.replace(/\D/g, '');
+      return cleaned;
+    }
+    setNumber(formatPhoneNumber(number))
+  }, [number]);
 
   function sendMessage(e){
     e.preventDefault()
@@ -114,7 +122,10 @@ function App() {
           </div>
           
           <div className="directFilterInner">
-            <select name='Diretoria inp' onChange={(e) => {setDir(e.target.value)}}>
+            <select name='Diretoria inp'onChange={(e) => {setDir(e.target.value)}}>
+              <option value="" hidden>
+                Selecione uma Diretoria...
+              </option>
               <option value="Diretoria da Mulher">Diretoria da Mulher</option>
               <option value="Diretoria de Diversidade Sexual e Gênero">Diretoria de Diversidade Sexual e Gênero</option>
               <option value="Diretoria de Saude e Meio-Ambiente">Diretoria de Saude e Meio-Ambiente</option>
