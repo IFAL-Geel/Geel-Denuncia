@@ -1,4 +1,4 @@
-<div style="text-align: center; width: 100%">
+<div align="center">
   <h1>Central de Denúncias - Geel IFAL</h1>
 </div>
 
