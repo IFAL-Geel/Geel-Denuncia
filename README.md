@@ -10,12 +10,11 @@
 
 ## Sobre o projeto
 
-O projeto é uma pareceria da Diretoria de Tecnologia e Inovação do Grêmio Estudantil Edson Luis (GEEL) do IFAL Maceió com a Gestão do campus que preza na segurança e ajuda ao corpo discente por meio de um sistema de denúncias. Esta Central também oficializa as denúcias como forma de certificar que os denunciantes tenham provas de que abriram abriram recurso em caso de omissão por parte dos orgãos competentes.
+O projeto é uma pareceria da Diretoria de Tecnologia e Inovação do Grêmio Estudantil Edson Luis (GEEL) do IFAL Maceió com a Gestão do campus que preza pela segurança e o suporte ao corpo discente por meio de um sistema de denúncias. Esta Central também oficializa as denúcias como forma de certificar que os denunciantes tenham provas de que tentaram abrir recursos em caso de omissão por parte dos orgãos competentes.
 
 
 ## Justificativa
-O Instituto Federal de Alagoas (IFAL) é uma instituição de ensino técnico, médio e superior. Devido à proporção magnânima da instituição, faz-se necessário um canal de denúncias para facilitar o contato do público geral
-com as organizações competentes.
+O Instituto Federal de Alagoas (IFAL) é uma instituição de ensino técnico, médio e superior. Devido à proporção magnânima da instituição, faz-se necessário um canal de denúncias para facilitar o contato do corpo discente com as organizações competentes.
 
 
 ## Layout
