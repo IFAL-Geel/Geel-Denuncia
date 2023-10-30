@@ -8,9 +8,9 @@
 </div>
 
 
-## Sobre o Projeto
+## Sobre o p rojeto
 
-O projeto é uma pareceria da Diretoria de Tecnologia e Inovação do Grêmio Estudantil Edson Luis (GEEL) do IFAL Maceió com a Gestão do campus que preza na segurança e ajuda ao corpo discente por meio de um sistema de denúncias. Esta Central também oficializa os meios
+O projeto é uma pareceria da Diretoria de Tecnologia e Inovação do Grêmio Estudantil Edson Luis (GEEL) do IFAL Maceió com a Gestão do campus que preza na segurança e ajuda ao corpo discente por meio de um sistema de denúncias. Esta Central também oficializa as denúcias como forma de certificar que os denunciantes tenham provas de que abriram denúncias em caso de omissão por parte dos orgãos competentes.
 
 
 ## Justificativa
@@ -82,9 +82,9 @@ Para que a denúncia seja anônima, o denunciante deverá deixar os quadros de n
 ## Pessoas autoras
 ### Diretoria de Tecnologia e Inovação <sub>(2022-2023) 
 
-<img src="https://i.ibb.co/nP3X4tk/Quote-of-Christmas-removebg-preview.png" width="200px"/>
+<img src="https://i.ibb.co/wyC8ctx/Diretoria-de-Tecnologia-e-Inova-o-GEEL.png" width="200px"/> 
 
-<img src="https:https://i.ibb.co/p3mNDFb/icons8-insta-50.png" width="22px"/>[Instagram](https://instagram.com/geelifal?igshid=MzRlODBiNWFlZA==)
+<img src="https://i.ibb.co/jVFh2JK/instagram-fill-256x256.png" width="18px"/>[Instagram](https://instagram.com/geelifal?igshid=MzRlODBiNWFlZA==)
 
 <img src="https://i.ibb.co/6BTCsb9/AFS-removebg-preview.png" width="17px"/>[Gremioedsonluisifal@gmail.com](mailto:Gremioedsonluisifal@gmail.com)
 
