@@ -8,7 +8,7 @@
 </div>
 
 
-## Sobre o p rojeto
+## Sobre o projeto
 
 O projeto é uma pareceria da Diretoria de Tecnologia e Inovação do Grêmio Estudantil Edson Luis (GEEL) do IFAL Maceió com a Gestão do campus que preza na segurança e ajuda ao corpo discente por meio de um sistema de denúncias. Esta Central também oficializa as denúcias como forma de certificar que os denunciantes tenham provas de que abriram denúncias em caso de omissão por parte dos orgãos competentes.
 
