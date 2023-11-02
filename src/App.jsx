@@ -16,7 +16,7 @@ function App() {
   const [number, setNumber] = useState("")
 
   useEffect(() => {
-    if(message.trim() !== "" && message.trim().length > 50 && dir != ""){
+    if(message.trim() !== "" && message.trim().length >= 100 && dir != ""){
       setSendEnabled(true)
     } else {
       setSendEnabled(false)
@@ -26,7 +26,7 @@ function App() {
 
   useEffect(() => {
     setTextAreaLenght(message.trim().length)
-    if(message.trim().length >= 50){
+    if(message.trim().length >= 100){
       const text = document.querySelector(".lenghtTextArea")
       text.style.visibility =  "hidden"
     } else {
@@ -56,7 +56,7 @@ function App() {
     button.style.pointerEvents = "none"
     button.style.backgroundColor = "#39beb3"
 
-    fetch("https://formsubmit.co/ajax/els26@aluno.ifal.edu.br", {
+    fetch("https://formsubmit.co/ajax/denunciasgeel@gmail.com", {
     method: "POST",
     headers:
       { 
@@ -130,6 +130,8 @@ function App() {
               <option value="Diretoria de Diversidade Sexual e Gênero">Diretoria de Diversidade Sexual e Gênero</option>
               <option value="Diretoria de Saude e Meio-Ambiente">Diretoria de Saude e Meio-Ambiente</option>
               <option value="Diretoria de Diversidade Étnica">Diretoria de Diversidade Étnica</option>
+              <option value="Diretoria de Assuntos Educacionais">Diretoria de Assuntos Educacionais</option>
+              <option value="Diretoria de Assistencia Estudantil">Diretoria de Assistencia Estudantil</option>
               <option value="Não sei dizer">Não sei dizer...</option>
             </select>
             <div className="iconDropInner">
@@ -144,7 +146,7 @@ function App() {
               onChange={(e) => {setMessage(e.target.value)}}
               className='reportArea inp'
               placeholder='Digite seu relato...'/>
-              <p className="lenghtTextArea">{textAreaLenght}/50</p>
+              <p className="lenghtTextArea">{textAreaLenght}/100</p>
           </div>
           <button className="reportSend" disabled={!sendEnabled} onClick={(e) => {sendMessage(e)}}>Enviar Denúncia</button>
         </form>
