@@ -25,9 +25,9 @@ function Modal(props) {
                         <dt>5. Assunção pela Gestão:</dt>
                             <dd>◾ A equipe de gestão do setor assume a responsabilidade pelo caso.</dd>
                             <dd>◾ A gestão inicia a investigação interna, se necessário, para apurar os detalhes da denúncia.</dd>
-                        <dt>6. Tomada de Medidas Necessárias:</dt>
-                            <dd>◾ Com base nas conclusões da investigação, os responsaveis tomará as medidas necessárias para lidar com a denúncia.</dd>
-                            <dd>◾ Isso pode incluir ações disciplinares, apoio às vítimas, medidas preventivas ou outras ações apropriadas.</dd>
+                        <dt>6. Tomada de Medidas Necessárias:</dt> 
+                            <dd>◾ Com base nas conclusões da investigação, o GEEL acompanhara se medidas estão sendo tomadas para lidar com a denúncia</dd>
+                            <dd>◾ Isso pode incluir manutenções, ações disciplinares, apoio às vítimas, medidas preventivas ou outras ações apropriadas.</dd>
                         <dt>7. Privacidade das Denúncias Anônimas:</dt>
                             <dd>◾ As denúncias anônimas também são tratadas com o mesmo rigor e confidencialidade que as identificadas.</dd>
                             <dd>◾ A identidade do denunciante anônimo é protegida, e nenhum esforço é feito para revelar sua identidade.</dd>
