@@ -20,13 +20,13 @@ function Modal(props) {
                             <dd>◾ Certifica-se de que a denúncia está completa e contém informações essenciais.</dd>
                         <dt>3. Verificação de Denúncias Anteriores:</dt>
                             <dd>◾ O conteúdo da denúncia é comparado com registros anteriores para identificar se outras denúncias relacionadas à mesma pessoa ou incidente foram feitas anteriormente.</dd>
-                        <dt>4. Encaminhamento à DAA (Diretoria de Apoio Acadêmico):</dt>
-                            <dd>◾ Após a análise inicial e a verificação de denúncias anteriores, a denúncia é encaminhada à Diretoria de Apoio Acadêmico do IFAL Campus Maceió.</dd>
+                        <dt>4. Encaminhamento ao setor reaponsável:</dt>
+                            <dd>◾ Após a análise inicial e a verificação de denúncias anteriores, a denúncia é encaminhada ao setor responsável do IFAL Campus Maceió.</dd>
                         <dt>5. Assunção pela Gestão:</dt>
-                            <dd>◾ A equipe de gestão da DAA assume a responsabilidade pelo caso.</dd>
+                            <dd>◾ A equipe de gestão do setor assume a responsabilidade pelo caso.</dd>
                             <dd>◾ A gestão inicia a investigação interna, se necessário, para apurar os detalhes da denúncia.</dd>
                         <dt>6. Tomada de Medidas Necessárias:</dt>
-                            <dd>◾ Com base nas conclusões da investigação, a DAA toma as medidas necessárias para lidar com a denúncia.</dd>
+                            <dd>◾ Com base nas conclusões da investigação, os responsaveis tomará as medidas necessárias para lidar com a denúncia.</dd>
                             <dd>◾ Isso pode incluir ações disciplinares, apoio às vítimas, medidas preventivas ou outras ações apropriadas.</dd>
                         <dt>7. Privacidade das Denúncias Anônimas:</dt>
                             <dd>◾ As denúncias anônimas também são tratadas com o mesmo rigor e confidencialidade que as identificadas.</dd>
