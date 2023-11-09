@@ -20,7 +20,7 @@ function Modal(props) {
                             <dd>◾ Certifica-se de que a denúncia está completa e contém informações essenciais.</dd>
                         <dt>3. Verificação de Denúncias Anteriores:</dt>
                             <dd>◾ O conteúdo da denúncia é comparado com registros anteriores para identificar se outras denúncias relacionadas à mesma pessoa ou incidente foram feitas anteriormente.</dd>
-                        <dt>4. Encaminhamento ao setor reaponsável:</dt>
+                        <dt>4. Encaminhamento ao Setor Responsável:</dt>
                             <dd>◾ Após a análise inicial e a verificação de denúncias anteriores, a denúncia é encaminhada ao setor responsável do IFAL Campus Maceió.</dd>
                         <dt>5. Assunção pela Gestão:</dt>
                             <dd>◾ A equipe de gestão do setor assume a responsabilidade pelo caso.</dd>
