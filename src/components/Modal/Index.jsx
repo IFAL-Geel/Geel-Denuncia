@@ -14,6 +14,7 @@ function Modal(props) {
                     <p>Sobre o Tratamento de Dados</p>
                     <dl>
                         <dt>1. Recebimento da Denúncia:</dt>
+                            <dd>◾ Se possível, é recomendado que a denúncia seja feita com identificação do denunciante, pois caso seja preciso maiores esclarecimentos ou informar atualizações, será possível entrar em contato.</dd>
                             <dd>◾ A denúncia é enviada para o e-mail associado ao site de denúncias, independentemente de ser identificada ou anônima.</dd>
                         <dt>2. Análise Inicial:</dt>
                             <dd>◾ Um membro designado da equipe responsável pelo site de denúncias verifica o conteúdo recebido.</dd>
